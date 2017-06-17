@@ -62,7 +62,7 @@ class TasksController extends Controller
     }
 
 
-    public function edit(Task $id)
+    public function edit(Task $task)
     {
         // get the task
 
@@ -70,7 +70,22 @@ class TasksController extends Controller
 
         // show the edit form and pass the task
 
-        return view('tasks.edit', compact('id'));
+        return view('tasks.edit', compact('task'));
   
+    }
+
+
+    public function update(Task $task)
+    {
+        return redirect('/');
+    }
+
+
+    public function delete(Task $task)
+    {   
+
+        $task->delete();
+
+        return back();
     }
 }

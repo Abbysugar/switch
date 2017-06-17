@@ -20,10 +20,21 @@ Route::get('/tasks/create', 'TasksController@create');
 Route::post('/tasks', 'TasksController@store');
 
 
-Route::post('/tasks/{id}/edit', 'TasksController@edit');
+Route::get('/tasks/edit/{task}', 'TasksController@edit');
+
+
+Route::post('/tasks/edit/{task}', 'TasksController@update');
+
+
+Route::get('/tasks/delete/{task}', 'TasksController@delete');
 
 
 Route::get('/tasks/{task}', 'TasksController@show');
+
+
+
+
+
 
 
 // Route::get('/tasks/{id}', 'TasksController@show');

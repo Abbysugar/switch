@@ -49,7 +49,9 @@
 
               <a href="/tasks/{{ $task->id }}" class="btn btn-info">View Task</a>
 
-              <a href="/tasks/{{ $task-> id }}" class="btn btn-primary">Edit Task</a>
+              <a href="/tasks/edit/{{ $task->id }}" class="btn btn-primary">Edit Task</a>
+
+              <a href="/tasks/delete/{{ $task->id }}" class="btn btn-danger">Delete Task</a>
 
               </p>
 
