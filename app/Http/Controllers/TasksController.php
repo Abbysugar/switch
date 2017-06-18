@@ -75,8 +75,29 @@ class TasksController extends Controller
     }
 
 
-    public function update(Task $task)
+    public function update(Request $request, $id)
     {
+
+        
+        $this->validate(request(), [
+
+            'title' => 'required',
+            'body' => 'required',
+
+        ]);
+
+        // $validator = Validator::make(Input::all());
+
+        // Task::update(request(['title', 'body']));
+        Task::updateOrCreate(
+            ['id' => $id],
+            [
+                'title' => $request->title,
+                'body'  => $request->body
+            ]
+            );
+
+        
         return redirect('/');
     }
 

@@ -10,15 +10,14 @@
 
 					<li>{{ $error }}</li>
 
-				@endforeach
-				
+				@endforeach	
 	
 			</ul>
 
 		</div>
 
-
-
 	</div>
 
 @endif
+
+

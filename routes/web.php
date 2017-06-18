@@ -23,7 +23,7 @@ Route::post('/tasks', 'TasksController@store');
 Route::get('/tasks/edit/{task}', 'TasksController@edit');
 
 
-Route::post('/tasks/edit/{task}', 'TasksController@update');
+Route::post('/tasks/edit/{id}', 'TasksController@update');
 
 
 Route::get('/tasks/delete/{task}', 'TasksController@delete');
